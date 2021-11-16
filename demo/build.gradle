@@ -1,17 +1,18 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 android {
-    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
-    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+    compileSdk 31
     defaultConfig {
-        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
-        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
-        versionName project.VERSION_NAME
-        versionCode Integer.parseInt(project.VERSION_CODE)
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
     }
     buildTypes {
         release {
@@ -26,11 +27,11 @@ android {
 
 dependencies {
     implementation project(':library')
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
 //    compile 'com.daimajia.easing:library:1.0.0@aar'
 //    compile 'com.daimajia.androidanimations:library:1.1.2@aar'
-    compile 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
 //    // This dude gave a shoutout to you (daimajia) on his github page:
 //    compile 'jp.wasabeef:recyclerview-animators:1.0.3@aar'
 }
