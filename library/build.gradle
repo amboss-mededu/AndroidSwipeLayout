@@ -78,3 +78,7 @@ android {
     }
 
 }
+affectedTestConfiguration {
+//        jvmTestTask = "testDeDebugUnitTest"
+    jvmTestTask = "foo"
+}
