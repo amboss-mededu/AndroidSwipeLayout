@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.library'
 }
+
+apply from: '../../shared_android.gradle'
+
 android {
     compileSdk 31
 
