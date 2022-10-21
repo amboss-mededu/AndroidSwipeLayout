@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.2.2" type="baseline" client="gradle" dependencies="false" name="AGP (7.2.2)" variant="all" version="7.2.2">
+
+    <issue
+        id="DiscouragedPrivateApi"
+        message="Reflective access to performLongPress, which is not part of the public SDK and therefore likely to change in future Android releases"
+        errorLine1="                Method m = AbsListView.class.getDeclaredMethod(&quot;performLongPress&quot;, View.class, int.class, long.class);"
+        errorLine2="                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/daimajia/swipe/SwipeLayout.java"
+            line="1124"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        super.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/daimajia/swipe/adapters/RecyclerSwipeAdapter.java"
+            line="27"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view `SwipeLayout` overrides `onTouchEvent` but not `performClick`"
+        errorLine1="    public boolean onTouchEvent(MotionEvent event) {"
+        errorLine2="                   ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/daimajia/swipe/SwipeLayout.java"
+            line="958"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.START`&quot; instead of &quot;`Gravity.LEFT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="                gravity = Gravity.LEFT;"
+        errorLine2="                                  ~~~~">
+        <location
+            file="src/main/java/com/daimajia/swipe/SwipeLayout.java"
+            line="727"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.END`&quot; instead of &quot;`Gravity.RIGHT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="                gravity = Gravity.RIGHT;"
+        errorLine2="                                  ~~~~~">
+        <location
+            file="src/main/java/com/daimajia/swipe/SwipeLayout.java"
+            line="730"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.START`&quot; instead of &quot;`Gravity.LEFT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            if ((gravity &amp; Gravity.LEFT) == Gravity.LEFT) {"
+        errorLine2="                                   ~~~~">
+        <location
+            file="src/main/java/com/daimajia/swipe/SwipeLayout.java"
+            line="758"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.START`&quot; instead of &quot;`Gravity.LEFT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            if ((gravity &amp; Gravity.LEFT) == Gravity.LEFT) {"
+        errorLine2="                                                    ~~~~">
+        <location
+            file="src/main/java/com/daimajia/swipe/SwipeLayout.java"
+            line="758"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.END`&quot; instead of &quot;`Gravity.RIGHT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            if ((gravity &amp; Gravity.RIGHT) == Gravity.RIGHT) {"
+        errorLine2="                                   ~~~~~">
+        <location
+            file="src/main/java/com/daimajia/swipe/SwipeLayout.java"
+            line="761"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.END`&quot; instead of &quot;`Gravity.RIGHT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            if ((gravity &amp; Gravity.RIGHT) == Gravity.RIGHT) {"
+        errorLine2="                                                     ~~~~~">
+        <location
+            file="src/main/java/com/daimajia/swipe/SwipeLayout.java"
+            line="761"
+            column="54"/>
+    </issue>
+
+</issues>
